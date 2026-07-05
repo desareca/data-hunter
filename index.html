@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data-Hunter 🎯 — Job Board</title>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --surface: #1a1d28;
+      --surface2: #232738;
+      --border: #2d324a;
+      --text: #e4e6f0;
+      --text2: #9298b0;
+      --accent: #00d4aa;
+      --fire: #ff6b6b;
+      --good: #4ecdc4;
+      --warn: #ffd93d;
+      --bad: #6c757d;
+      --tag-bg: #2d324a;
+      --radius: 12px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      padding: 24px;
+    }
+    .container { max-width: 1100px; margin: 0 auto; }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 32px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    header h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    header h1 span { color: var(--accent); }
+    .last-updated {
+      font-size: 0.85rem;
+      color: var(--text2);
+    }
+    .stats {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .stat {
+      background: var(--surface);
+      padding: 8px 16px;
+      border-radius: var(--radius);
+      font-size: 0.85rem;
+    }
+    .stat strong { display: block; font-size: 1.2rem; color: var(--accent); }
+
+    /* Filters */
+    .filters {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+    .filters input, .filters select {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 10px 14px;
+      border-radius: var(--radius);
+      font-size: 0.9rem;
+      outline: none;
+      flex: 1;
+      min-width: 200px;
+    }
+    .filters input:focus, .filters select:focus {
+      border-color: var(--accent);
+    }
+    .filters select { cursor: pointer; }
+
+    /* Job Cards */
+    .jobs { display: flex; flex-direction: column; gap: 12px; }
+    .job {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      transition: border-color 0.2s;
+    }
+    .job:hover { border-color: var(--accent); }
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+    .job-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .job-title a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .job-title a:hover { color: var(--accent); }
+    .job-company {
+      color: var(--text2);
+      font-size: 0.9rem;
+    }
+    .job-meta {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-size: 0.85rem;
+      color: var(--text2);
+      margin-bottom: 10px;
+    }
+    .job-meta span { display: flex; align-items: center; gap: 4px; }
+    .job-desc {
+      font-size: 0.88rem;
+      color: var(--text2);
+      line-height: 1.6;
+      margin-bottom: 12px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .job-tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .tag {
+      background: var(--tag-bg);
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      color: var(--text2);
+    }
+
+    /* Score badges */
+    .score-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .score-fire { background: rgba(255,107,107,0.15); color: var(--fire); }
+    .score-good { background: rgba(78,205,196,0.15); color: var(--good); }
+    .score-warn { background: rgba(255,217,61,0.15); color: var(--warn); }
+    .score-bad  { background: rgba(108,117,125,0.15); color: var(--bad); }
+    .score-val {
+      font-size: 0.75rem;
+      opacity: 0.7;
+    }
+
+    /* Empty state */
+    .empty {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--text2);
+    }
+    .empty .emoji { font-size: 3rem; margin-bottom: 16px; }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      body { padding: 16px; }
+      header h1 { font-size: 1.3rem; }
+      .job { padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>🎯 <span>Data-Hunter</span></h1>
+        <p class="last-updated" id="lastUpdated">Última actualización: —</p>
+      </div>
+      <div class="stats" id="stats">
+        <div class="stat"><strong id="totalCount">0</strong>Total ofertas</div>
+        <div class="stat"><strong id="perfectCount">0</strong>🔥 Perfecto</div>
+        <div class="stat"><strong id="goodCount">0</strong>👍 Buen match</div>
+      </div>
+    </header>
+
+    <div class="filters">
+      <input type="text" id="searchInput" placeholder="Buscar por empresa, cargo, tecnología..." oninput="filterJobs()">
+      <select id="scoreFilter" onchange="filterJobs()">
+        <option value="all">Todos los scores</option>
+        <option value="perfect">🔥 Perfecto (≥80)</option>
+        <option value="good">👍 Buen match (60-79)</option>
+        <option value="warn">⚠️ Regular (40-59)</option>
+        <option value="bad">❌ No calza (&lt;40)</option>
+      </select>
+      <select id="sourceFilter" onchange="filterJobs()">
+        <option value="all">Todas las fuentes</option>
+      </select>
+    </div>
+
+    <div class="jobs" id="jobsContainer">
+      <div class="empty">
+        <div class="emoji">🔍</div>
+        <p>Cargando ofertas...</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let jobs = [];
+
+    async function loadJobs() {
+      try {
+        const resp = await fetch('jobs.json');
+        const data = await resp.json();
+        jobs = data.offers || [];
+        document.getElementById('lastUpdated').textContent =
+          'Última actualización: ' + new Date(data.last_updated).toLocaleString('es-CL');
+
+        // Update stats
+        document.getElementById('totalCount').textContent = jobs.length;
+        document.getElementById('perfectCount').textContent = jobs.filter(j => j.score >= 80).length;
+        document.getElementById('goodCount').textContent = jobs.filter(j => j.score >= 60 && j.score < 80).length;
+
+        // Populate source filter
+        const sources = [...new Set(jobs.map(j => j.source))];
+        const sf = document.getElementById('sourceFilter');
+        sources.forEach(s => {
+          const opt = document.createElement('option');
+          opt.value = s;
+          opt.textContent = s.charAt(0).toUpperCase() + s.slice(1);
+          sf.appendChild(opt);
+        });
+
+        renderJobs(jobs);
+      } catch(e) {
+        document.getElementById('jobsContainer').innerHTML =
+          `<div class="empty"><div class="emoji">⚠️</div><p>No se pudieron cargar las ofertas.</p></div>`;
+      }
+    }
+
+    function scoreBadge(score) {
+      if (score >= 80) return 'score-fire';
+      if (score >= 60) return 'score-good';
+      if (score >= 40) return 'score-warn';
+      return 'score-bad';
+    }
+
+    function scoreLabel(score) {
+      if (score >= 80) return '🔥 Perfecto';
+      if (score >= 60) return '👍 Buen match';
+      if (score >= 40) return '⚠️ Regular';
+      return '❌ No calza';
+    }
+
+    function renderJobs(list) {
+      const container = document.getElementById('jobsContainer');
+      if (list.length === 0) {
+        container.innerHTML = `<div class="empty"><div class="emoji">🔍</div><p>No se encontraron ofertas con esos filtros.</p></div>`;
+        return;
+      }
+
+      // Sort by score desc
+      list.sort((a, b) => b.score - a.score);
+
+      container.innerHTML = list.map(j => `
+        <div class="job">
+          <div class="job-header">
+            <div>
+              <div class="job-title">
+                <a href="${j.url}" target="_blank" rel="noopener">${j.title}</a>
+              </div>
+              <div class="job-company">${j.company}</div>
+            </div>
+            <span class="score-badge ${scoreBadge(j.score)}">
+              ${scoreLabel(j.score)}
+              <span class="score-val">${j.score}</span>
+            </span>
+          </div>
+          <div class="job-meta">
+            <span>📍 ${j.location || 'No especificado'}</span>
+            ${j.salary ? `<span>💰 $${j.salary.toLocaleString()}/mes</span>` : '<span>💰 No especificado</span>'}
+            <span>📅 ${j.posted_date || '—'}</span>
+            <span>📡 ${j.source}</span>
+          </div>
+          <div class="job-desc">${j.description_snippet || 'Sin descripción disponible.'}</div>
+          <div class="job-tags">
+            ${(j.stack_match || []).map(t => `<span class="tag">${t}</span>`).join('')}
+            ${j.notes ? `<span class="tag" style="background:rgba(0,212,170,0.1);color:var(--accent)">${j.notes}</span>` : ''}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function filterJobs() {
+      const q = document.getElementById('searchInput').value.toLowerCase();
+      const scoreFilter = document.getElementById('scoreFilter').value;
+      const sourceFilter = document.getElementById('sourceFilter').value;
+
+      let filtered = jobs.filter(j => {
+        // Text search
+        if (q) {
+          const haystack = (j.title + ' ' + j.company + ' ' + (j.stack_match||[]).join(' ') + ' ' + (j.notes||'')).toLowerCase();
+          if (!haystack.includes(q)) return false;
+        }
+        // Score filter
+        if (scoreFilter === 'perfect' && j.score < 80) return false;
+        if (scoreFilter === 'good' && (j.score < 60 || j.score >= 80)) return false;
+        if (scoreFilter === 'warn' && (j.score < 40 || j.score >= 60)) return false;
+        if (scoreFilter === 'bad' && j.score >= 40) return false;
+        // Source filter
+        if (sourceFilter !== 'all' && j.source !== sourceFilter) return false;
+        return true;
+      });
+
+      renderJobs(filtered);
+    }
+
+    loadJobs();
+  </script>
+</body>
+</html>
