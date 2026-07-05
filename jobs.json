@@ -1,1 +1,30 @@
-{"last_updated": "2026-07-05T23:10:00Z", "candidate": "Carlos Saquel", "offers": []}
+{
+  "last_updated": "2026-07-05T23:10:00Z",
+  "candidate": "Carlos Saquel",
+  "offers": [
+    {
+      "id": "remoteok-1134476",
+      "title": "Lead Data Scientist",
+      "company": "Brigit",
+      "url": "https://remoteok.com/remote-jobs/remote-lead-data-scientist-brigit-1134476",
+      "apply_url": "https://remoteok.com/l/1134476",
+      "source": "remoteok",
+      "location": "United States (Remote)",
+      "salary": "$185,000 - $215,000/year (~$15,400 - $17,900/month)",
+      "salary_min": 185000,
+      "salary_max": 215000,
+      "currency": "USD",
+      "published": "2026-07-04",
+      "description": "Lead Data Scientist at Brigit, a fintech company focused on financial health for Americans. Building ML models for credit risk, fraud detection, and payment optimization. Stack: Python, SQL, sklearn, ML modeling, A/B testing, production deployment.",
+      "requirements": {
+        "experience_years": "6+",
+        "education": "Advanced degree in DS/Stats/CS",
+        "english": "Advanced - Strong written and verbal communication",
+        "stack": ["Python", "SQL", "scikit-learn", "pandas", "ML modeling"]
+      },
+      "score": 78,
+      "score_label": "👍",
+      "match_reason": "Excelente salario ($15k+/mes), Python+SQL, ML modeling puro. El requirement de 6+ años es el mayor filtro. Inglés avanzado requerido."
+    }
+  ]
+}
