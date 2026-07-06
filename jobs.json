@@ -1,30 +1,119 @@
 {
-  "last_updated": "2026-07-05T23:10:00Z",
-  "candidate": "Carlos Saquel",
-  "offers": [
+  "metadata": {
+    "generated_at": "2026-07-05T23:59:00Z",
+    "source": "Data-Hunter Weekly Search",
+    "candidate": "Carlos Saquel",
+    "total_jobs_searched": 4,
+    "jobs_qualified": 3,
+    "min_salary_usd_monthly": 1800,
+    "stack_required": [
+      "python",
+      "sql",
+      "aws",
+      "gcp",
+      "power bi",
+      "fastapi",
+      "docker"
+    ]
+  },
+  "jobs": [
     {
-      "id": "remoteok-1134476",
+      "id": "brigit-lead-data-scientist",
       "title": "Lead Data Scientist",
       "company": "Brigit",
-      "url": "https://remoteok.com/remote-jobs/remote-lead-data-scientist-brigit-1134476",
-      "apply_url": "https://remoteok.com/l/1134476",
-      "source": "remoteok",
-      "location": "United States (Remote)",
-      "salary": "$185,000 - $215,000/year (~$15,400 - $17,900/month)",
+      "location": "San Francisco (Remote)",
       "salary_min": 185000,
       "salary_max": 215000,
-      "currency": "USD",
-      "published": "2026-07-04",
-      "description": "Lead Data Scientist at Brigit, a fintech company focused on financial health for Americans. Building ML models for credit risk, fraud detection, and payment optimization. Stack: Python, SQL, sklearn, ML modeling, A/B testing, production deployment.",
-      "requirements": {
-        "experience_years": "6+",
-        "education": "Advanced degree in DS/Stats/CS",
-        "english": "Advanced - Strong written and verbal communication",
-        "stack": ["Python", "SQL", "scikit-learn", "pandas", "ML modeling"]
-      },
-      "score": 78,
-      "score_label": "👍",
-      "match_reason": "Excelente salario ($15k+/mes), Python+SQL, ML modeling puro. El requirement de 6+ años es el mayor filtro. Inglés avanzado requerido."
+      "salary_currency": "USD",
+      "salary_period": "annual",
+      "description": "Build, test and roll out ML models for risk, fraud, and payments. Full lifecycle ownership from conception to production. 6+ years data science experience required. Python, SQL, ML expertise.",
+      "stack": [
+        "python",
+        "sql",
+        "sklearn",
+        "pandas"
+      ],
+      "remote": true,
+      "remote_regions": [
+        "worldwide"
+      ],
+      "job_type": "full-time",
+      "url": "https://remoteok.com/remote-jobs/remote-lead-data-scientist-brigit-1134476",
+      "posted_date": "2026-07-04",
+      "source": "RemoteOK",
+      "score": 68,
+      "score_notes": [
+        "✅ Salary $185,000/yr ($15,417/mo)",
+        "📚 Stack match: python, sql",
+        "👔 Senior/Lead level",
+        "🎯 Data/ML role",
+        "🌍 English-speaking company"
+      ],
+      "rating": "👍"
+    },
+    {
+      "id": "lemon-senior-ai-engineer",
+      "title": "Senior AI Engineer Architect",
+      "company": "Lemon.io",
+      "location": "Remote (Global)",
+      "salary_min": 80000,
+      "salary_max": 190000,
+      "salary_currency": "USD",
+      "salary_period": "annual",
+      "description": "AI architecture and engineering role. Python, SQL, AI/ML focus. Senior level.",
+      "stack": [
+        "python",
+        "sql",
+        "ai"
+      ],
+      "remote": true,
+      "remote_regions": [
+        "worldwide"
+      ],
+      "job_type": "full-time",
+      "url": "https://remoteok.com/remote-jobs/remote-senior-ai-engineer-architect-lemon-io-1134396",
+      "posted_date": "2026-07-04",
+      "source": "RemoteOK",
+      "score": 48,
+      "score_notes": [
+        "✅ Salary $80,000/yr ($6,667/mo)",
+        "📚 Stack match: python, sql",
+        "👔 Senior/Lead level",
+        "🌍 English-speaking company"
+      ],
+      "rating": "⚠️"
+    },
+    {
+      "id": "newflyer-data-scientist",
+      "title": "Data Scientist",
+      "company": "New Flyer",
+      "location": "Winnipeg, Canada (Remote)",
+      "salary_min": null,
+      "salary_max": null,
+      "salary_currency": "USD",
+      "salary_period": null,
+      "description": "Python, data science, cloud computing. Design and development roles.",
+      "stack": [
+        "python",
+        "cloud"
+      ],
+      "remote": true,
+      "remote_regions": [
+        "north-america"
+      ],
+      "job_type": "full-time",
+      "url": "https://remoteok.com/remote-jobs/remote-data-scientist-new-flyer-1134357",
+      "posted_date": "2026-07-04",
+      "source": "RemoteOK",
+      "score": 39,
+      "score_notes": [
+        "⚠️ Salary not disclosed",
+        "📚 Stack match: python",
+        "👤 Mid level",
+        "🎯 Data/ML role",
+        "🌍 English-speaking company"
+      ],
+      "rating": "❌"
     }
   ]
 }
