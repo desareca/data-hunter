@@ -1,43 +1,142 @@
 {
-  "last_updated": "2026-07-06T13:50:00Z",
+  "last_updated": "2026-07-07T23:57:00Z",
   "candidate": "Carlos Saquel",
   "offers": [
     {
-      "title": "Data Engineer (ML & LLM Focus)",
-      "company": "Improving South America",
-      "url": "https://www.getonbrd.com/jobs/data-science-analytics/data-engineer-data-scientist-improving-south-america-remote",
-      "location": "Remote (Chile, Argentina, Peru, Colombia)",
-      "salary": 3000,
-      "salary_estimated": true,
-      "source": "getonboard",
+      "title": "Data Scientist Sr \u2013 AWS / Sagemaker / Python",
+      "company": "CoyanServices",
+      "url": "https://www.getonbrd.com/jobs/data-science-analytics/data-scientist-senior-aws-sagemaker-python-coyanservices-remote-0d09",
+      "location": "Remote",
+      "salary": 2900,
+      "salary_estimated": false,
+      "source": "getonbrd",
       "score": 85,
       "stack_match": [
         "python",
-        "sql",
-        "ml",
-        "aws"
+        "aws",
+        "sql"
       ],
-      "description_snippet": "Desarrollar e implementar soluciones basadas en datos. Dise\u00f1ar pipelines ETL/ELT. Construir y desplegar ML models. Se valora experiencia con LLMs.",
-      "posted_date": "2026-07-03",
-      "notes": "\ud83d\udd25 Reci\u00e9n publicada (3 jul). Stack perfecto: Python+SQL+ML+LLMs. Ideal para perfil h\u00edbrido."
+      "description_snippet": "Rol enfocado en dise\u00f1o, desarrollo y despliegue de modelos ML usando AWS SageMaker, ingenier\u00eda de datos, validaci\u00f3n estad\u00edstica y MLOps.",
+      "posted_date": "2026-07-02",
+      "notes": "Senior, full-time, 66 postulantes"
     },
     {
-      "title": "Subgerente de Inteligencia Artificial",
-      "company": "BC Tecnolog\u00eda",
-      "url": "https://www.getonbrd.com/jobs/machine-learning-ai/subgerente-de-inteligencia-artificial-bc-tecnologia-remote",
-      "location": "Remote",
-      "salary": 4000,
-      "salary_estimated": true,
-      "source": "getonboard",
+      "title": "Ingeniero de Datos (AWS, SQL y Python)",
+      "company": "3IT",
+      "url": "https://www.getonbrd.com/empleos/data-science-analytics/ingeniero-de-datos-aws-sql-y-python-3it-remote",
+      "location": "Remote (Chile)",
+      "salary": 2350,
+      "salary_estimated": false,
+      "source": "getonbrd",
       "score": 82,
       "stack_match": [
         "python",
         "sql",
         "aws"
       ],
-      "description_snippet": "Liderar estrategia de IA, equipos multidisciplinarios, proyectos de Data Science/Advanced Analytics. MLOps, gobierno de datos.",
+      "description_snippet": "Ingeniero de datos con 3+ a\u00f1os en banca/fintech, experto en SQL, Python y AWS para dise\u00f1ar y mantener procesos de datos.",
       "posted_date": "2026-07-03",
-      "notes": "\ud83d\udd25 Reci\u00e9n publicada (3 jul). Rol directivo de IA. Stack no publicado pero requiere background en Data Science."
+      "notes": "Semi senior, $2200-2500 USD/mes, responde mismo d\u00eda"
+    },
+    {
+      "title": "Data Engineer (ML & LLM Focus)",
+      "company": "Improving South America",
+      "url": "https://www.getonbrd.com/empleos/data-science-analytics/data-engineer-data-scientist-improving-south-america-remote",
+      "location": "Remote (4 locations)",
+      "salary": 3000,
+      "salary_estimated": true,
+      "source": "getonbrd",
+      "score": 78,
+      "stack_match": [
+        "python",
+        "sql",
+        "docker"
+      ],
+      "description_snippet": "Desarrollar soluciones basadas en datos, construir pipelines ETL/ELT y desplegar modelos ML usando Python, SQL y cloud Azure.",
+      "posted_date": "2026-07-07",
+      "notes": "Nuevo hoy. Requiere ingl\u00e9s avanzado (indispensable)"
+    },
+    {
+      "title": "Data Scientist (Contract)",
+      "company": "Epoch AI",
+      "url": "https://dynamitejobs.com/company/epochai/remote-job/data-scientist-contract",
+      "location": "Remote",
+      "salary": 5200,
+      "salary_estimated": true,
+      "source": "dynamitejobs",
+      "score": 77,
+      "stack_match": [
+        "python"
+      ],
+      "description_snippet": "Part-time data scientist para investigaci\u00f3n en AI. Revisar literatura t\u00e9cnica, trackear benchmarks, analizar infraestructura de AI.",
+      "posted_date": "2026-07-01",
+      "notes": "$30-40/hr, 10-30hrs/semana, flexible. Requiere ingl\u00e9s profesional"
+    },
+    {
+      "title": "Senior Clinical Data Engineer (LATAM)",
+      "company": "Precision for Medicine",
+      "url": "https://job-boards.greenhouse.io/pfm/jobs/5813365004",
+      "location": "Remote (LATAM)",
+      "salary": 3500,
+      "salary_estimated": true,
+      "source": "greenhouse",
+      "score": 76,
+      "stack_match": [
+        "python",
+        "sql"
+      ],
+      "description_snippet": "Liderar desarrollo de sistemas de datos cl\u00ednicos, pipelines ETL, dashboards. Python, R, SQL, SAS. Expansi\u00f3n en LATAM incluyendo Chile.",
+      "posted_date": "2026-07-04",
+      "notes": "Senior, 6+ a\u00f1os experiencia. Ingl\u00e9s profesional requerido"
+    },
+    {
+      "title": "Data Scientist Senior \u2013 AWS / Sagemaker / Python / Neptune",
+      "company": "CoyanServices",
+      "url": "https://www.getonbrd.com/jobs/data-science-analytics/data-scientist-senior-aws-sagemaker-python-neptune-coyanservices-remote-9075",
+      "location": "Remote",
+      "salary": 2900,
+      "salary_estimated": true,
+      "source": "getonbrd",
+      "score": 75,
+      "stack_match": [
+        "python",
+        "aws"
+      ],
+      "description_snippet": "Dise\u00f1ar, entrenar y desplegar modelos ML/AI en AWS, pipelines de datos, bases de datos de grafos Neptune.",
+      "posted_date": "2026-07-02",
+      "notes": "Freelance/contractor, 71 postulantes"
+    },
+    {
+      "title": "Senior Looker / Lookml Consultant",
+      "company": "Improving South America",
+      "url": "https://www.getonbrd.com/empleos/data-science-analytics/senior-looker-lookml-consultant-improving-south-america-remote",
+      "location": "Remote (Chile and Argentina)",
+      "salary": 3000,
+      "salary_estimated": true,
+      "source": "getonbrd",
+      "score": 68,
+      "stack_match": [
+        "sql"
+      ],
+      "description_snippet": "Consultor Senior Looker/LookML, 6+ a\u00f1os Data & Analytics, arquitecturas LookML multi-proyecto, migraci\u00f3n Tableau a Looker.",
+      "posted_date": "2026-07-02",
+      "notes": "BI-focused, 22 postulantes. Requiere ingl\u00e9s"
+    },
+    {
+      "title": "Lead Data Scientist",
+      "company": "Brigit",
+      "url": "https://remoteok.com/remote-jobs/remote-lead-data-scientist-brigit-1134476",
+      "location": "Remote (US)",
+      "salary": null,
+      "salary_estimated": false,
+      "source": "remoteok",
+      "score": 67,
+      "stack_match": [
+        "python"
+      ],
+      "description_snippet": "Build, improve and maintain ML models for credit risk, fraud detection. Fintech, US-based fintech health company.",
+      "posted_date": "2026-07-04",
+      "notes": "US hours probable, salario no publicado"
     },
     {
       "title": "Ingeniero(a) de Datos",
@@ -46,101 +145,31 @@
       "location": "Remote (Chile)",
       "salary": 2200,
       "salary_estimated": true,
-      "source": "getonboard",
-      "score": 80,
+      "source": "getonbrd",
+      "score": 65,
       "stack_match": [
         "sql",
         "python"
       ],
-      "description_snippet": "ETL, Data Warehouse, Azure, SQL. Clientes retail/marketing. Metodolog\u00edas \u00e1giles.",
+      "description_snippet": "Desarrollar y mantener procesos ETL, integrando datos en Data Warehouse con SQL Server y Azure Databricks.",
       "posted_date": "2026-07-02",
-      "notes": "\ud83d\udd25 Reci\u00e9n publicada (2 jul). Remoto Chile, semi senior, retail (af\u00edn a su background). Stack Azure m\u00e1s que AWS."
+      "notes": "Azure-focused, remote Chile"
     },
     {
-      "title": "Senior Data & AI Architect",
-      "company": "Interfell",
-      "url": "https://www.getonbrd.com/jobs/machine-learning-ai/senior-data-analyst-ai-specialist-interfell-remote",
-      "location": "Remote (Chile, Argentina, Uruguay)",
-      "salary": 3750,
-      "salary_estimated": false,
-      "source": "getonboard",
-      "score": 80,
-      "stack_match": [
-        "python",
-        "sql",
-        "aws"
-      ],
-      "description_snippet": "Modelos matem\u00e1ticos y algoritmos de IA. Data mining, Big Data. Liderar auditor\u00edas \u00e9ticas de algoritmos. Mentor\u00eda.",
-      "posted_date": "2026-06-27",
-      "notes": "$3,500-4,000/mo. Senior, remoto Chile. Stack fuerte, paga s\u00f3lida."
-    },
-    {
-      "title": "Data Scientist Senior",
-      "company": "Grupo Mariposa",
-      "url": "https://www.getonbrd.com/empleos/data-science-analytics/data-scientist-senior-grupo-mariposa-remote",
-      "location": "Remote LATAM",
-      "salary": 3000,
-      "salary_estimated": true,
-      "source": "getonboard",
-      "score": 78,
-      "stack_match": [
-        "python",
-        "sql"
-      ],
-      "description_snippet": "Liderar desarrollo de modelos anal\u00edticos. ML, IA, anal\u00edtica avanzada. 5+ a\u00f1os exp.",
-      "posted_date": "2026-05-29",
-      "notes": "Multinacional bebidas/alimentos. Senior. Buena opci\u00f3n aunque lleva un mes publicada."
-    },
-    {
-      "title": "Data Scientist",
-      "company": "Improving South America",
-      "url": "https://www.getonbrd.com/empleos/data-science-analytics/data-scientist-improving-south-america-remote",
-      "location": "Remote LATAM",
-      "salary": 3000,
-      "salary_estimated": true,
-      "source": "getonboard",
-      "score": 78,
-      "stack_match": [
-        "python",
-        "sql"
-      ],
-      "description_snippet": "Perfil h\u00edbrido Data Science + ML + Data Engineering. Pipelines, datasets, LLMs. Full lifecycle.",
-      "posted_date": "2026-06-10",
-      "notes": "Senior. 157 postulantes. Perfil h\u00edbrido muy alineado. Mucha competencia."
-    },
-    {
-      "title": "Semi Sr Data Scientist",
-      "company": "Airnguru",
-      "url": "https://www.getonbrd.com/empleos/data-science-analytics/data-scientist-airnguru-remote-8f5b",
-      "location": "Remote (Chile)",
-      "salary": 2650,
-      "salary_estimated": false,
-      "source": "getonboard",
-      "score": 75,
-      "stack_match": [
-        "python",
-        "sql"
-      ],
-      "description_snippet": "Modelos estad\u00edsticos y ML aplicados: elecci\u00f3n discreta, clustering, series de tiempo, optimizaci\u00f3n. Pricing/Revenue Management.",
-      "posted_date": "2026-04-24",
-      "notes": "$2,300-3,000/mo. Remoto Chile. Semi senior. Aplicaci\u00f3n en ingl\u00e9s."
-    },
-    {
-      "title": "Lead Data Scientist",
-      "company": "Brigit",
-      "url": "https://remoteok.com/remote-jobs/remote-lead-data-scientist-brigit-1134476",
-      "location": "San Francisco (Remote, Worldwide)",
-      "salary": 16667,
+      "title": "Junior Data Analyst",
+      "company": "Numa",
+      "url": "https://remoteOK.com/remote-jobs/remote-junior-data-analyst-numa-1134429",
+      "location": "Remote (Portugal)",
+      "salary": null,
       "salary_estimated": false,
       "source": "remoteok",
-      "score": 60,
+      "score": 37,
       "stack_match": [
-        "python",
         "sql"
       ],
-      "description_snippet": "Build risk/fraud/payment ML models. Full lifecycle ownership. 6+ yrs. Fintech (Forbes Fintech 50 2022).",
-      "posted_date": "2026-07-04",
-      "notes": "$185k-215k/yr. US timezone challenge pero paga excepcional. Riesgo: horario."
+      "description_snippet": "Junior data analyst role at Numa, a hospitality brand. Lisbon-based, likely requires EU timezone overlap.",
+      "posted_date": "2026-07-03",
+      "notes": "Junior, EU-based, bajo score"
     }
   ]
 }
